@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NYTTopStories_Unit_4_review.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		C1A68DC023EC714E004181DB /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DBF23EC714E004181DB /* NewsFeedView.swift */; };
 		C1A68DC823EC7E12004181DB /* NYTTopStories_Unit_4_reviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DC723EC7E12004181DB /* NYTTopStories_Unit_4_reviewTests.swift */; };
 		C1A68DD023EC8585004181DB /* TopStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DCF23EC8585004181DB /* TopStory.swift */; };
+		C1A68DD423EC8670004181DB /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = C1A68DD323EC8670004181DB /* ImageKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A68DD423EC8670004181DB /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,11 +89,11 @@
 		C1A68D9F23EC6B65004181DB /* NYTTopStories_Unit_4_review */ = {
 			isa = PBXGroup;
 			children = (
+				C1A68DD123EC85F6004181DB /* Models */,
 				C1A68DBE23EC7116004181DB /* Views */,
 				C1A68DB723EC6E0C004181DB /* Controllers */,
 				C1A68DB623EC6DEF004181DB /* Supporting Files */,
 				C1A68DAE23EC6B68004181DB /* Info.plist */,
-				C1A68DCF23EC8585004181DB /* TopStory.swift */,
 			);
 			path = NYTTopStories_Unit_4_review;
 			sourceTree = "<group>";
@@ -135,6 +137,14 @@
 			path = NYTTopStories_Unit_4_reviewTests;
 			sourceTree = "<group>";
 		};
+		C1A68DD123EC85F6004181DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1A68DCF23EC8585004181DB /* TopStory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +161,9 @@
 			dependencies = (
 			);
 			name = NYTTopStories_Unit_4_review;
+			packageProductDependencies = (
+				C1A68DD323EC8670004181DB /* ImageKit */,
+			);
 			productName = NYTTopStories_Unit_4_review;
 			productReference = C1A68D9D23EC6B65004181DB /* NYTTopStories_Unit_4_review.app */;
 			productType = "com.apple.product-type.application";
@@ -201,6 +214,9 @@
 				Base,
 			);
 			mainGroup = C1A68D9423EC6B65004181DB;
+			packageReferences = (
+				C1A68DD223EC8670004181DB /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = C1A68D9E23EC6B65004181DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -497,6 +513,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1A68DD223EC8670004181DB /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1A68DD323EC8670004181DB /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1A68DD223EC8670004181DB /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1A68D9523EC6B65004181DB /* Project object */;
 }
