@@ -19,6 +19,7 @@
 		C1A68DC823EC7E12004181DB /* NYTTopStories_Unit_4_reviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DC723EC7E12004181DB /* NYTTopStories_Unit_4_reviewTests.swift */; };
 		C1A68DD023EC8585004181DB /* TopStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DCF23EC8585004181DB /* TopStory.swift */; };
 		C1A68DD423EC8670004181DB /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = C1A68DD323EC8670004181DB /* ImageKit */; };
+		C1A68DD623EC87D4004181DB /* NYTTopStoriesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DD523EC87D4004181DB /* NYTTopStoriesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C1A68DC723EC7E12004181DB /* NYTTopStories_Unit_4_reviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTTopStories_Unit_4_reviewTests.swift; sourceTree = "<group>"; };
 		C1A68DC923EC7E12004181DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1A68DCF23EC8585004181DB /* TopStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStory.swift; sourceTree = "<group>"; };
+		C1A68DD523EC87D4004181DB /* NYTTopStoriesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTTopStoriesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		C1A68D9F23EC6B65004181DB /* NYTTopStories_Unit_4_review */ = {
 			isa = PBXGroup;
 			children = (
+				C1A68DD723EC87DB004181DB /* Networking Services */,
 				C1A68DD123EC85F6004181DB /* Models */,
 				C1A68DBE23EC7116004181DB /* Views */,
 				C1A68DB723EC6E0C004181DB /* Controllers */,
@@ -143,6 +146,14 @@
 				C1A68DCF23EC8585004181DB /* TopStory.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C1A68DD723EC87DB004181DB /* Networking Services */ = {
+			isa = PBXGroup;
+			children = (
+				C1A68DD523EC87D4004181DB /* NYTTopStoriesAPIClient.swift */,
+			);
+			path = "Networking Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				C1A68DB523EC6C45004181DB /* NYTTopStoriesTabController.swift in Sources */,
 				C1A68DA323EC6B65004181DB /* SceneDelegate.swift in Sources */,
 				C1A68DC023EC714E004181DB /* NewsFeedView.swift in Sources */,
+				C1A68DD623EC87D4004181DB /* NYTTopStoriesAPIClient.swift in Sources */,
 				C1A68DD023EC8585004181DB /* TopStory.swift in Sources */,
 				C1A68DBB23EC6E74004181DB /* SavedArticleViewController.swift in Sources */,
 				C1A68DB923EC6E65004181DB /* NewsFeedViewController.swift in Sources */,
