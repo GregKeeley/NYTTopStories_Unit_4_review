@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NewsFeedViewController.swift
 //  NYTTopStories_Unit_4_review
 //
 //  Created by Gregory Keeley on 2/6/20.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NewsFeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .red
     }
+    
 
 
 }
-
