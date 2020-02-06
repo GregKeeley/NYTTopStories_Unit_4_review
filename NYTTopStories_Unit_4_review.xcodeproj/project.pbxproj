@@ -12,6 +12,7 @@
 		C1A68DA523EC6B65004181DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DA423EC6B65004181DB /* ViewController.swift */; };
 		C1A68DAA23EC6B68004181DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A68DA923EC6B68004181DB /* Assets.xcassets */; };
 		C1A68DAD23EC6B68004181DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1A68DAB23EC6B68004181DB /* LaunchScreen.storyboard */; };
+		C1A68DB523EC6C45004181DB /* NYTTopStoriesTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DB423EC6C45004181DB /* NYTTopStoriesTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C1A68DA923EC6B68004181DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1A68DAC23EC6B68004181DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1A68DAE23EC6B68004181DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A68DB423EC6C45004181DB /* NYTTopStoriesTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTTopStoriesTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				C1A68DA023EC6B65004181DB /* AppDelegate.swift */,
 				C1A68DA223EC6B65004181DB /* SceneDelegate.swift */,
+				C1A68DB423EC6C45004181DB /* NYTTopStoriesTabController.swift */,
 				C1A68DA423EC6B65004181DB /* ViewController.swift */,
 				C1A68DA923EC6B68004181DB /* Assets.xcassets */,
 				C1A68DAB23EC6B68004181DB /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			files = (
 				C1A68DA523EC6B65004181DB /* ViewController.swift in Sources */,
 				C1A68DA123EC6B65004181DB /* AppDelegate.swift in Sources */,
+				C1A68DB523EC6C45004181DB /* NYTTopStoriesTabController.swift in Sources */,
 				C1A68DA323EC6B65004181DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
