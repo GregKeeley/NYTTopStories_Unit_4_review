@@ -18,9 +18,20 @@ private let newsFeedView = NewsFeedView()
         view.backgroundColor = .systemBackground
         newsFeedView.collectionView.delegate = self
         newsFeedView.collectionView.dataSource = self
-        newsFeedView.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "articleCell")
+        newsFeedView.collectionView.register(NewsCell.self, forCellWithReuseIdentifier: "articleCell")
+        fetchStories()
     }
-    
+    private func fetchStories(for section: String = "Technology") {
+        NYTTopStoriesAPIClient.fetchTopStories(for: section) { (result) in
+            switch result {
+            case .failure(let appError):
+                print("\(appError)")
+            case .success(let articles):
+                print("found \(articles.count)")
+            }
+            
+        }
+    }
 
 
 }

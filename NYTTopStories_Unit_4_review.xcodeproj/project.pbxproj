@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C10C829723EC8C0000D7F75E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C829623EC8C0000D7F75E /* Config.swift */; };
+		C127FF6E23EDB728000BE197 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C127FF6D23EDB728000BE197 /* NewsCell.swift */; };
 		C1A68DA123EC6B65004181DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DA023EC6B65004181DB /* AppDelegate.swift */; };
 		C1A68DA323EC6B65004181DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A68DA223EC6B65004181DB /* SceneDelegate.swift */; };
 		C1A68DAA23EC6B68004181DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1A68DA923EC6B68004181DB /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		C10C829623EC8C0000D7F75E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C127FF6D23EDB728000BE197 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		C1A68D9D23EC6B65004181DB /* NYTTopStories_Unit_4_review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTTopStories_Unit_4_review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A68DA023EC6B65004181DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A68DA223EC6B65004181DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				C1A68DCF23EC8585004181DB /* TopStory.swift */,
+				C127FF6D23EDB728000BE197 /* NewsCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				C10C829723EC8C0000D7F75E /* Config.swift in Sources */,
 				C1A68DBB23EC6E74004181DB /* SavedArticleViewController.swift in Sources */,
 				C1A68DB923EC6E65004181DB /* NewsFeedViewController.swift in Sources */,
+				C127FF6E23EDB728000BE197 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
