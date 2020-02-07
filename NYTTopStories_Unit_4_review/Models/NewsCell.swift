@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageKit
 
 class NewsCell: UICollectionViewCell {
     public lazy var articleImage: UIImageView = {
@@ -77,5 +78,21 @@ class NewsCell: UICollectionViewCell {
             
         ])
     }
-
+    public func configureCell(with article: Article) {
+        articleTitleLabel.text = article.title
+        abstractHeadlineLabel.text = article.abstract
+        articleImage.getImage(with: article.getArticleImageURL(for: .thumbLarge)) { [weak self] (result) in
+            switch result {
+            case .failure:
+                DispatchQueue.main.async {
+                    self?.articleImage.image = UIImage(systemName: "exclamationmark-octagon")
+                }
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.articleImage.image = image
+                }
+            }
+            
+        }
+    }
 }
