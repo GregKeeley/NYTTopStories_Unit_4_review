@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import DataPersistence
 
 class NewsFeedViewController: UIViewController {
-private let newsFeedView = NewsFeedView()
+    
+    public var dataPersistence: DataPersistence<Article>!
+    
+    private let newsFeedView = NewsFeedView()
     override func loadView() {
         view = newsFeedView
     }
+    
     private var newsArticles = [Article]() {
         didSet {
             DispatchQueue.main.async {
@@ -41,8 +46,8 @@ private let newsFeedView = NewsFeedView()
             
         }
     }
-
-
+    
+    
 }
 extension NewsFeedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,23 +63,27 @@ extension NewsFeedViewController: UICollectionViewDataSource {
         cell.insetsLayoutMarginsFromSafeArea = true
         let article = newsArticles[indexPath.row]
         cell.configureCell(with: article)
-       return cell
+        return cell
     }
     
     
 }
 extension NewsFeedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let maxSize: CGSize = UIScreen.main.bounds.size
-        let itemWidth: CGFloat = maxSize.width
-        let itemHeight: CGFloat = maxSize.height * 0.20
-        return CGSize(width: itemWidth, height: itemHeight)
-    }
+            let maxwidth = (UIScreen.main.bounds.size.width)
+            let adjustedWidth = (maxwidth * 0.95)
+            return CGSize(width: adjustedWidth, height: (adjustedWidth / 2))
+        }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let article = newsArticles[indexPath.row]
         let articleDetailVC = ArticleDetailViewController()
+        
         articleDetailVC.article = article
+        articleDetailVC.dataPersistence = dataPersistence
         navigationController?.pushViewController(articleDetailVC, animated: true)
         
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
 }

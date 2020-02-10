@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import DataPersistence
 
 class SettingsViewController: UIViewController {
-
+public var dataPersistence: DataPersistence<Article>!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green

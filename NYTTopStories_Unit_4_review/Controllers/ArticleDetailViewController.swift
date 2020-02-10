@@ -8,9 +8,12 @@
 
 import UIKit
 import ImageKit
+import DataPersistence
 
 class ArticleDetailViewController: UIViewController {
-
+    
+    public var dataPersistence: DataPersistence<Article>!
+    
     public var article: Article?
     private let detailView = ArticleDetailView()
     override func loadView() {
@@ -27,7 +30,12 @@ class ArticleDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bookmark"), style: .plain, target: self, action: #selector(saveArticleButtonPressed(_:)))
     }
     @objc func saveArticleButtonPressed(_ sender: UIBarButtonItem) {
-        print("saved article")
+        guard let article = article else { return }
+        do {
+        try dataPersistence.createItem(article)
+        } catch {
+            print("Failed to save article")
+        }
     }
     private func updateUI() {
         guard let article = article else {
